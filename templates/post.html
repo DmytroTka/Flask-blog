@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="post-title">{{ post.title }}</h2>
+<p class="post-content">{{ post.content }}</p>
+
+<p>Likes: {{ post.likes }}</p>
+<p>Dislikes: {{ post.dislikes }}</p>
+<form action="{{ url_for('like_post', id=post.id) }}" method="post">
+    <button type="submit">Like</button>
+</form>
+<form action="{{ url_for('dislike_post', id=post.id) }}" method="post">
+    <button type="submit">Dislike</button>
+</form>
+
+<ul class="post-menu">
+    <li><a href="{{ url_for('edit', id=post.id) }}">Edit the post</a></li>
+    <li><a href="{{ url_for('delete', id=post.id) }}">Delete that post</a></li>
+</ul>
+{% endblock %}

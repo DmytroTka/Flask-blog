@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flaskblog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Flaskblog</h1>
+        <ul class="menu">
+            <li><a href="/">Main page</a></li>
+            <li><a href="/new">New post</a></li>
+        </ul>
+    </div>
+
+    <div class="flash">
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+        <ul class="flash-messages">
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+    </div>
+    <div class="content">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</body>
+</html>

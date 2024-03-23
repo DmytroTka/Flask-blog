@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-sarif;
+}
+
+.title{
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    padding: 20px;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+}
+
+.menu li{
+    padding: 10px;
+}
+
+.menu li a{
+    text-decoration: none;
+    color: #333;
+}
+
+.btn.btn-primary{
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    padding: 15px 30px;
+    border : 0px;
+    border-radius: 5px;
+    height: auto;
+}
+
+.flash{
+    padding: 20px;
+
+}
+
+ul{
+    list-style: none;
+}
+
+.flash-messages{
+    list-style: none;
+}
+
+.form-group{
+    margin-bottom: 10px;
+}
+
+.form-group label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.form-group input, .form-group textarea{
+    width: 100%;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.form-group{
+    width: 70%;
+    margin-left: 15%;
+}

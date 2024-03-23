@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="{{url_for('edit', id=post.id)}}" method="post">
+    <div class="form-group">
+        <label for="title">Post title</label>
+        <input type="text" name="title" id="title" class="form-control" value="{{ post.title }}" required>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Post content</label>
+        <textarea  name="content" id="content" class="form-control" rows="10" required>{{ post.content }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    </div>
+</form>
+
+{% endblock %}

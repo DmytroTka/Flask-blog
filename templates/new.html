@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="/new" method="post">
+    <div class="form-group">
+        <label for="title">Post Title</label>
+        <input type="text" name="title" id="title" class="form-control" placeholder="Write a title for the post" required>
+        <label for="content">Post Title</label>
+        <textarea name="content" id="content" class="form-control" rows="10" placeholder="Write a content for the post" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Add post to your blog</button>
+    </div>
+</form>
+{% endblock %}

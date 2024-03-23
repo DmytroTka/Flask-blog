@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="delete-title">Are you sure that you want to delete this post()</h2>
+<p class="delete-post">{{ post.title }}</p>
+
+<form action="{{ url_for('delete', id=post.id) }}" method="post">
+    <button class="btn btn-danger">Yes, delete the post</button>
+    <a href="url_for('post', id=post.id)" class="btn btn-secondary">No, return to the post</a>
+</form>
+{% endblock %}
